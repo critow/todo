@@ -1,23 +1,21 @@
-.Todo
-  &List
-    &Item
-      font-size: 1.25rem
+.TodoListItem
+  font-size: 1.25rem
 
-      button
-        width: 35px
-        margin: 3px
+  button
+    width: 35px
+    margin: 3px
 
-      &Label
-        margin-left: 1.25rem
-        line-height: 35px
-        cursor: pointer
-        user-select: none
+  &Label
+    margin-left: 1.25rem
+    line-height: 35px
+    cursor: pointer
+    user-select: none
 
-      &.done
-        .TodoListItemLabel
-          text-decoration: line-through
+.TodoListItemDone
+  font-size: 1.25rem
+  text-decoration: line-through
 
-      &.important
-        .TodoListItemLabel
-          font-weight: bold
-          color: steelblue
+.TodoListItemImportant
+  font-size: 1.25rem
+  font-weight: bold
+  color: steelblue

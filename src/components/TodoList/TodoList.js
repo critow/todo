@@ -3,7 +3,7 @@ import TodoListItem from "../TodoListItem/TodoListItem";
 import styleList from './TodoList.module.sass'
 
 
-export default ({todoList}) => {
+export default ({todoList, onDeleted}) => {
     const {TodoList} = styleList;
     return (
         <ul className={`list-group ${TodoList}`}>
@@ -12,7 +12,8 @@ export default ({todoList}) => {
 
                 return (
                     <li key={id} className="list-group-item">
-                        <TodoListItem {...itemProps}/>
+                        <TodoListItem {...itemProps}
+                                      onDeleted={() => onDeleted(id)}/>
                     </li>
                 )
             })}
