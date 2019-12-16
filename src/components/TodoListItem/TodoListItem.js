@@ -1,53 +1,28 @@
-import React, {Component} from "react";
+import React from "react";
 import styleList from './TodoListItem.module.sass'
 
-export default class TodoListItem extends Component {
+export default ({label, onDeleted, onToggleImportant, onToggleDone, important, done}) => {
+    const {TodoListItem, TodoListItemLabel, TodoListItemDone, TodoListItemImportant} = styleList;
 
-    state = {
-        done: false,
-        important: false
-    };
+    let labelClasses = TodoListItemLabel;
 
-    onLabelClick = () => {
-        this.setState(({done}) => {
-            return {
-                done: !done
-            }
-        })
-    };
+    if (done) {
+        labelClasses += ` ${TodoListItemDone}`;
+    }
 
-    onMarkImportant = () => {
-        this.setState(({important}) => {
-            return {
-                important: !important
-            }
-        })
-    };
+    if (important) {
+        labelClasses += ` ${TodoListItemImportant}`;
+    }
 
-    render() {
-        const {label, onDeleted} = this.props;
-        const {done, important} = this.state;
-        const {TodoListItem, TodoListItemLabel, TodoListItemDone, TodoListItemImportant} = styleList;
-
-        let labelClasses = TodoListItemLabel;
-
-        if (done) {
-            labelClasses += ` ${TodoListItemDone}`;
-        }
-
-        if (important) {
-            labelClasses += ` ${TodoListItemImportant}`;
-        }
-
-        return (
-            <span className={TodoListItem}>
+    return (
+        <span className={TodoListItem}>
                 <span
                     className={labelClasses}
-                    onClick={this.onLabelClick}>{label}</span>
+                    onClick={onToggleDone}>{label}</span>
 
                 <button type="button"
                         className="btn btn-outline-success btn-sm float-right"
-                        onClick={this.onMarkImportant}>
+                        onClick={onToggleImportant}>
                 <i className="fa fa-exclamation"/>
                 </button>
 
@@ -57,6 +32,5 @@ export default class TodoListItem extends Component {
                  <i className="fa fa-trash-o"/>
                 </button>
             </span>
-        )
-    }
+    )
 }
