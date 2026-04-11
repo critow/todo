@@ -1,5 +1,5 @@
 import React from "react";
-import styleList from './TodoListItem.module.sass'
+import styleList from './TodoListItem.module.css'
 
 export default ({label, onDeleted, onToggleImportant, onToggleDone, important, done}) => {
     const {TodoListItem, TodoListItemLabel, TodoListItemDone, TodoListItemImportant} = styleList;

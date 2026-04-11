@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import styleList from './SearchPanel.module.sass';
+import styleList from './SearchPanel.module.css';
 
 export default class SearchPanel extends Component {
 

@@ -1,5 +1,5 @@
 import React from "react";
-import styleList from './AppHeader.module.sass'
+import styleList from './AppHeader.module.css'
 
 export default ({toDo, done}) => {
     const {AppHeader} = styleList;

@@ -1,6 +1,6 @@
 import React from "react";
 import TodoListItem from "../TodoListItem/TodoListItem";
-import styleList from './TodoList.module.sass'
+import styleList from './TodoList.module.css'
 
 
 export default ({todoList, onDeleted, onToggleImportant, onToggleDone}) => {
