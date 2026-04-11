@@ -1,13 +1,10 @@
 import React from "react";
-import styleList from './AppHeader.module.css'
 
 export default ({toDo, done}) => {
-    const {AppHeader} = styleList;
-
     return (
-        <div className={`${AppHeader} d-flex`}>
-            <h1>Todo List</h1>
-            <h2>{toDo} more to do, {done} done</h2>
+        <div className="flex items-end">
+            <h1 className="flex-1">Todo List</h1>
+            <h2 className="text-xl text-gray-500">{toDo} more to do, {done} done</h2>
         </div>
     );
 };
