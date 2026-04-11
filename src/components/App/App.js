@@ -5,7 +5,6 @@ import SearchPanel from "../SearchPanel/SearchPanel";
 import ItemStatusFilter from "../ItemStatusFilter/ItemStatusFilter";
 import TodoList from "../TodoList/TodoList";
 import ItemAddForm from "../ItemAddForm/ItemAddForm";
-import styleList from "./App.module.css";
 
 export default class App extends Component {
 
@@ -111,7 +110,6 @@ export default class App extends Component {
     }
 
     render() {
-        const {TodoApp, TopPanel} = styleList;
         const {todoData, term, filter} = this.state;
 
         const doneCount = todoData.filter(el => el.done).length;
@@ -120,9 +118,9 @@ export default class App extends Component {
         const visibleItems = this.filter(this.search(todoData, term), filter);
 
         return (
-            <div className={TodoApp}>
+            <div className="mx-auto mt-8 max-w-[400px]">
                 <AppHeader toDo={todoCount} done={doneCount}/>
-                <div className={`${TopPanel} d-flex`}>
+                <div className="flex my-4">
                     <SearchPanel onSearchChange={this.onSearchChange}/>
                     <ItemStatusFilter filter={filter}
                                       onFilterChange={this.onFilterChange}/>

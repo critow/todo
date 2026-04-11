@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import styleList from './ItemAddForm.module.css';
 
 export default class ItemAddForm extends Component {
 
@@ -22,17 +21,15 @@ export default class ItemAddForm extends Component {
     };
 
     render() {
-        const {ItemAddForm} = styleList;
-
         return (
-            <form className={`${ItemAddForm} d-flex`}
+            <form className="flex mt-[10px]"
                   onSubmit={this.onSubmit}>
                 <input type="text"
-                       className="form-control"
+                       className="form-control mr-[3px]"
                        placeholder="Enter task"
                        onChange={this.onLabelChange}
                        value={this.state.label}/>
-                <button className="btn btn-outline-secondary">Add Task</button>
+                <button className="btn btn-outline-secondary whitespace-nowrap">Add Task</button>
             </form>
         );
     }

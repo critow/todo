@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import styleList from './SearchPanel.module.css';
 
 export default class SearchPanel extends Component {
 
@@ -14,9 +13,8 @@ export default class SearchPanel extends Component {
     };
 
     render() {
-        const {SearchInput} = styleList;
         return <input type="text"
-                      className={`${SearchInput} form-control`}
+                      className="form-control w-auto grow mr-[3px]"
                       placeholder="type to search"
                       value={this.state.term}
                       onChange={this.onSearchChange}/>;

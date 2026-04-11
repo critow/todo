@@ -1,17 +1,15 @@
 import React from "react";
 import TodoListItem from "../TodoListItem/TodoListItem";
-import styleList from './TodoList.module.css'
 
 
 export default ({todoList, onDeleted, onToggleImportant, onToggleDone}) => {
-    const {TodoList} = styleList;
     return (
-        <ul className={`list-group ${TodoList}`}>
+        <ul className="list-group">
             {todoList.map((item) => {
                 const {id, ...itemProps} = item;
 
                 return (
-                    <li key={id} className="list-group-item">
+                    <li key={id} className="list-group-item py-1 px-3">
                         <TodoListItem {...itemProps}
                                       onDeleted={() => onDeleted(id)}
                                       onToggleImportant={() => onToggleImportant(id)}
