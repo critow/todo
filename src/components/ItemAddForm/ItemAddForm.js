@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import styleList from './ItemAddForm.module.sass';
+import styleList from './ItemAddForm.module.css';
 
 export default class ItemAddForm extends Component {
 

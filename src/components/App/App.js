@@ -5,7 +5,7 @@ import SearchPanel from "../SearchPanel/SearchPanel";
 import ItemStatusFilter from "../ItemStatusFilter/ItemStatusFilter";
 import TodoList from "../TodoList/TodoList";
 import ItemAddForm from "../ItemAddForm/ItemAddForm";
-import styleList from "./App.module.sass";
+import styleList from "./App.module.css";
 
 export default class App extends Component {
 
